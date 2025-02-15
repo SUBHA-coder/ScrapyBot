@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper with AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Web Scraping Section -->
+        <div id="scrape-container">
+            <h2>Web Scraper</h2>
+            <input type="text" id="url" placeholder="Enter Webpage URL">
+            <button onclick="scrapeData()">Scrape</button>
+            <button id="toggle-scrape">Hide Scraped Data</button>
+            <div id="scraped-content"></div>
+        </div>
+
+        <!-- Chat System -->
+        <div class="chat-section">
+            <h2>Ask AI</h2>
+            <div id="chat-box"></div>
+            <div class="input-area">
+                <input type="text" id="question" placeholder="Ask about the scraped data">
+                <button onclick="askQuestion()">Ask</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
